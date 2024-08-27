@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-import fileUpload from 'express-fileupload';
 import "reflect-metadata"
 import { AppDataSource } from "./data-source"
 import OperatorController from './controllers/OperatorController';
