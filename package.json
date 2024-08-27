@@ -3,11 +3,11 @@
    "version": "1.0.0",
    "description": "",
    "main": "server.ts",
-   "type": "module",
    "scripts": {
       "dev": "ts-node-dev --transpile-only --trace-warnings --ignore-watch node_modules src/server.ts",
-      "run": "tsc && node dist/server.js",
-      "start": "ts-node src/server.ts",
+      "build": "tsc",
+      "start": "node --experimental-modules build/server.js",
+      "run": "tsc && node --experimental-modules build/server.js",
       "typeorm": "typeorm-ts-node-commonjs"
    },
    "author": "",
