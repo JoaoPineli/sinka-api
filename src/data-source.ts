@@ -1,12 +1,13 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
+import 'dotenv/config'
 
 export const AppDataSource = new DataSource({
     type: "postgres",
-    host: "aws-0-sa-east-1.pooler.supabase.com",
-    port: 6543,
-    username: "postgres.wgjlxpwlixfjvuwmpihr",
-    password: "$p$spiZ$uq9zesU4",
+    host: process.env.DB_HOST,
+    port: Number(process.env.DB_PORT),
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
     database: "postgres",
     synchronize: true,
     logging: false,
